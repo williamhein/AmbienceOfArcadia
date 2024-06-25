@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Ambience of Arcadia</title>
+    </head>
+    <body>
+        <div id="paperBackground"></div>
+        <div id="pageContainer">
+            <div id="mainTitle">
+                Ambience of Arcadia
+            </div>
+            <fieldset id="outterAmbienceContainer">
+                <legend>Ambience</legend>
+                <div id="ambienceContainer">
+                    
+                </div>
+            </fieldset>
+            <fieldset id="outterMusicContainer">
+                <legend>Music</legend>
+                <div id="musicContainer">
+            
+                </div>
+            </fieldset>
+            <fieldset id="outterSoundContainer">
+                <legend>Sound</legend>
+                <div id="soundContainer">
+
+                </div>
+            </fieldset>
+            <fieldset id="outterPresetContainer">
+                <legend id="presetLegend">Presets</legend>
+                <div id="presetContainer">
+                    <div id="presetFunctionContainer">
+                        <div id="presetSave">
+                            <div id="presetSaveImage">
+                                
+                            </div>
+                            <div id="presetSaveText">
+                                Save
+                            </div>
+                        </div>
+                        <div id="presetRefresh">
+                            <div id="presetRefreshImage">
+                                
+                            </div>
+                            <div id="presetRefreshText">
+                                Refresh
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset id="outterHiddenContainer">
+                <legend id="hiddenLegend">Hidden</legend>
+                <div id="hiddenContainer">
+
+                </div>
+            </fieldset>
+        </div>
+
+        <svg>
+            <filter id="wavy2">
+              <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="1"></feTurbulence>
+              <feDisplacementMap in="SourceGraphic" scale="20" />
+            </filter>
+          </svg>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.core.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

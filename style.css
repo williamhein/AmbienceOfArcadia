@@ -1,0 +1,511 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+:root {
+  font-size: 26px;
+  font-family: "Short Stack", sans-serif;
+  background-color: #FDF7F1;
+  color: #3c3c3c;
+  font-weight: bold;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+legend {
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+/* #paperBackground {
+  height: 98vh;
+  width: 98vw;
+  margin: 0;
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+  /* background: radial-gradient(#FDF7F1,#e7caad);
+  /* filter: url(#wavy2); 
+} */
+
+
+
+fieldset {
+  transition: height 0.5s;
+}
+
+fieldset.minimize {
+  height: 2% !important;
+}
+
+#mainTitle {
+  font-size: min(10vh,10vw);
+  height: 10%;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-align: center;
+}
+
+#pageContainer {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: none;
+}
+
+#outterAmbienceContainer {
+  height: 50%;
+  width: 42.5%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  /* border-radius: 1.5rem;
+  border: 0.2rem solid rgb(41, 41, 41); */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+
+  overflow: hidden;
+}
+
+#ambienceContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+#outterMusicContainer {
+  height: 50%;
+  width: 42.5%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  /* border-radius: 1.5rem;
+  border: 0.2rem solid rgb(41, 41, 41); */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+  
+  overflow: hidden;
+}
+
+#musicContainer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+#outterSoundContainer {
+  height: 20%;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 75%;
+  left: 25%;
+  /* border-radius: 1.5rem;
+  border: 0.2rem solid rgb(41, 41, 41); */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+
+  overflow: hidden;
+}
+
+#soundContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+#outterPresetContainer {
+  height: 20%;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  /* border-radius: 1.5rem;
+  border: 0.2rem solid rgb(41, 41, 41); */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+
+  overflow: hidden;
+}
+
+#presetContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+#outterHiddenContainer {
+  height: 20%;
+  width: 15%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 75%;
+  right: 5%;
+  /* border-radius: 1.5rem;
+  border: 0.2rem solid rgb(41, 41, 41); */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+
+  overflow: hidden;
+}
+
+#hiddenContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+  height: 2vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1;  */
+  
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: #888;  */
+
+  border-style: solid;
+  border-width: 1vh 1vh 1vh 1vh;
+  border-image: url(img/border.svg) 10 10 10 10 stretch stretch;
+
+  overflow: hidden;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  /* background: #555;  */
+}
+
+.soundcontainer {
+  position: relative;
+  width: 6rem; /* Width of the outside container */
+  height: 6rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+  float: left;
+  opacity: 0.7;
+  box-sizing: content-box;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.soundcontainer:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.soundimage {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.75rem;
+  width: 4.5rem;
+  height: 3.5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.soundtext {
+  position: absolute;
+  top: 3.75rem;
+  left: 0rem;
+  width: 6rem;
+  height: 1.25rem;
+  font-size: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.soundhide {
+  position: absolute;
+  bottom: 0.125rem;
+  right: 0;
+  width: 100%;
+  height: 1.25rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer; /* Cursor on hover */
+  background-image: url('img/hide.png');
+}
+
+.slidecontainer {
+  position: relative;
+  width: 15rem; /* Width of the outside container */
+  height: 2.5rem;
+  margin-bottom: 0.5rem;
+  float: left;
+  opacity: 0.7;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.hiddenslidecontainer {
+  position: relative;
+  width: 100%; /* Width of the outside container */
+  height: 1.5rem;
+  /* margin-bottom: 0.5rem; */
+  float: left;
+  opacity: 0.7;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.hiddenslidecontainer .slider, .hiddenslidecontainer .slideimage, .hiddenslidecontainer .soundimage {
+  display: none;
+}
+
+.hiddenslidecontainer .slidehide, .hiddenslidecontainer .soundhide {
+  background-image: url('img/view.png');
+  left: 0.25em;
+  width: 1rem;
+  height: 1rem;
+  top: 0.25rem;
+}
+
+.hiddenslidecontainer .slidetext, .hiddenslidecontainer .soundtext {
+  left: 2em;
+  width: 3rem;
+  height: 1rem;
+  top: 0.25rem;
+  font-size: 0.7rem;
+}
+
+
+.slidecontainer:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slideimage {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.slidehide {
+  position: absolute;
+  bottom: 0.125rem;
+  right: 0.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-size: contain;
+  cursor: pointer; /* Cursor on hover */
+  background-image: url('img/hide.png');
+}
+
+.slidetext {
+  position: absolute;
+  top: 0.125rem;
+  left: 4rem;
+  width: 10rem;
+  height: 1.25rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  position: absolute;
+  font-size: 1rem;
+  bottom: 0.125rem;
+  left: 4rem;
+  width: 8.5rem; /* Full-width */
+  height: 1rem; /* Specified height */
+  /* background: #d3d3d3; Grey background */
+  outline: none; /* Rremove outline */
+  overflow: hidden;
+  border-radius: 0.625rem;
+  border: 0.1rem solid black;
+  box-sizing: border-box;
+  /* opacity: 0.7; Set transparency (for mouse-over effects on hover) */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 1rem; /* Set a specific slider handle width */
+  height: 1rem; /* Slider handle height */
+  /* background: #ffffff; Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  box-shadow: -15.625rem 0 0 15rem rgb(128, 128, 128);
+  border: 0.1rem solid black;
+}
+
+.slider::-moz-range-thumb {
+  width: 1rem; /* Set a specific slider handle width */
+  height: 1rem; /* Slider handle height */
+  /* background: #ffffff; Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 50%;
+  box-shadow: -15.625rem 0 0 15rem rgb(128, 128, 128);
+  border: 0.1rem solid black;
+  
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 1rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.slider::-moz-range-track {
+  height: 1rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+#presetFunctionContainer {
+  position: relative;
+  width: 100%;
+  height: 33%;
+}
+
+#presetRefresh, #presetSave {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  float: left;
+  opacity: 0.7;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+#presetRefreshText, #presetSaveText {
+  position: absolute;
+  width: 100%;
+  top: 70%;
+  left: 0;
+  height: 30%;
+  font-size: 1.5vh;
+  text-align: center;
+}
+
+#presetRefreshImage, #presetSaveImage {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#presetRefreshImage {
+  background-image: url('img/refresh.png');
+}
+
+#presetSaveImage {
+  background-image: url('img/save.png');
+}
+
+#presetRefresh:hover, #presetSave:hover, .presetLinePlayImage, .presetLineDeleteImage{
+  opacity: 1;
+}
+
+.presetLineContainer {
+  position: relative;
+  width: 90%; /* Width of the outside container */
+  height: 1rem;
+  margin-top: 0.25rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  float: left;
+  opacity: 0.7;
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.presetLineText {
+  position: absolute;
+  left: 0%;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  font-size: 0.7rem;
+}
+
+.presetLinePlayImage {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('img/play.png');
+  left: 70%;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+}
+
+.presetLineDeleteImage {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('img/delete.png');
+  left: 85%;
+  width: 15%;
+  height: 100%;
+  top: 0;
+  cursor: pointer;
+}
